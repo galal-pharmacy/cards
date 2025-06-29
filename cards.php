@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صيدليات جلال</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to right, #e8fdf5, #f8fffe);
+      color: #013a30;
+      line-height: 1.6;
+    }
+
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: #00b189;
+      color: #f4e4c1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+
+    #loader img {
+      height: 150px;
+      margin-bottom: 20px;
+    }
+
+    #loader h2 {
+      font-size: 24px;
+      animation: typing 3s steps(40, end) 1s 1 normal both;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #f4e4c1;
+      width: 0;
+      max-width: 90%;
+      text-align: center;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    header, .branches, .complaints, footer {
+      display: none;
+    }
+
+    header {
+      background-color: #00b189;
+      text-align: center;
+      padding: 30px 20px;
+      color: white;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    header img {
+      height: 90px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .branches {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .branch-card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .branch-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .branch-card h2 {
+      color: #007f6a;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .branch-card p {
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .whatsapp-btn, .location-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      color: white;
+    }
+
+    .whatsapp-btn {
+      background-color: #25d366;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5b;
+    }
+
+    .location-btn {
+      background-color: #0077cc;
+    }
+
+    .location-btn:hover {
+      background-color: #005fa3;
+    }
+
+    .complaints {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #e3faf5;
+      margin-top: 60px;
+      border-top: 2px dashed #00b189;
+    }
+
+    .complaints h2 {
+      font-size: 24px;
+      color: #00564b;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #f1f1f1;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+  <div id="loader">
+    <img src="logo.png" alt="لوجو صيدليات جلال" />
+    <h2>مرحباً بك في صيدليات جلال <br> نتمنى لكم الشفاء العاجل</h2>
+  </div>
+
+  <header>
+    <img src="logo.png" alt="لوجو صيدليات جلال" />
+    <h1>صيدليات جلال</h1>
+  </header>
+
+  <section class="branches">
+    <div class="branch-card">
+      <h2>فرع الزراعة</h2>
+      <p>📍 العنوان: [المحلة الكبري - الزراعة - اخر شارع مصنع العمده]</p>
+      <div class="button-group">
+        <a class="whatsapp-btn" href="https://wa.me/201060883446" target="_blank">راسل الفرع</a>
+        <a class="location-btn" href="https://maps.app.goo.gl/ppHEhjjwkRFH8Vfq9" target="_blank">الموقع</a>
+      </div>
+    </div>
+    <div class="branch-card">
+      <h2>فرع المنشيه</h2>
+      <p>📍 العنوان: [المحلة الكبري - منشية السلام - شارع هاني دياب خلف شادر الصياد]</p>
+      <div class="button-group">
+        <a class="whatsapp-btn" href="https://wa.me/201070746305" target="_blank">راسل الفرع</a>
+        <a class="location-btn" href="https://maps.app.goo.gl/GSjPDx39JiJd4M486" target="_blank">الموقع</a>
+      </div>
+    </div>
+    <div class="branch-card">
+      <h2>فرع الترعه</h2>
+      <p>📍 العنوان: [المحلة الكبري - شارع الترعه الرئيسى - بجوار كرم لمواد البناء]</p>
+      <div class="button-group">
+        <a class="whatsapp-btn" href="https://wa.me/201070746303" target="_blank">راسل الفرع</a>
+        <a class="location-btn" href="https://www.google.com/maps?q=الترعة+المحلة+الكبرى" target="_blank">الموقع</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="complaints">
+    <h2>💬 الشكاوى والملاحظات</h2>
+    <p>راسلنا على واتساب في حالة وجود أي مشكلة أو استفسار</p>
+	<br>
+    <a class="whatsapp-btn" href="https://wa.me/201060883447" target="_blank">واتساب</a>
+  </section>
+
+  <footer>
+    &copy; 2025 صيدليات جلال. جميع الحقوق محفوظة.
+  </footer>
+
+  <script>
+    window.onload = () => {
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+        document.querySelector("header").style.display = "block";
+        document.querySelector(".branches").style.display = "grid";
+        document.querySelector(".complaints").style.display = "block";
+        document.querySelector("footer").style.display = "block";
+      }, 4000);
+    };
+  </script>
+</body>
+</html>
